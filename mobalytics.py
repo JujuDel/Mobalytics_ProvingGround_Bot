@@ -59,7 +59,7 @@ def get_position(event, x, y, flags, param):
 def getDim():
     global g_mouseX, g_mouseY
     global g_mouseX_click, g_mouseY_click
-    print("Getting the dimensions of the game'S sub-part on the screen...")
+    print("Getting the dimensions of the game's sub-part on the screen...")
     print("Please follow the displayed instructions...\n")
 
     # Text hyper-paremeters
@@ -263,7 +263,7 @@ def auto_clicker(img, pattern, offsetX, offsetY, threshold=0.8, debug=False):
 
 if __name__ == '__main__':
     # Do again the user intersection to get the windows dimensions
-    doGetDim = True
+    doGetDim = False
     if doGetDim or dim_to_click == -1 or dim_key_contol == -1 or dim_ship_avoider == -1:
         getDim()
     else:
@@ -274,7 +274,7 @@ if __name__ == '__main__':
         pattern_toClick = cv2.imread("data/patternToClick.png", 0)  # Pattern of a clickable area
         print("Loading the patterns images...  DONE")
 
-        print("\nGetting a the screen dimensions...")
+        print("\nGetting the screen dimensions...")
         # Do a first screenshot to get the dimension
         image = pyautogui.screenshot()
         # Convert the screenshot in an OpenCV understandable format
@@ -282,7 +282,7 @@ if __name__ == '__main__':
         # Get the screen dimension
         wxh = image.shape[:2][::-1]
         print(f"    Screen dimensions -> {wxh[0]}x{wxh[1]}")
-        print("Getting a the screen dimensions...  DONE")
+        print("Getting the screen dimensions...  DONE")
 
         print("\nPreparing the sub-dimensions...")
         # Update the sub-dimensions values
